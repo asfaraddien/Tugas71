@@ -17,8 +17,8 @@ from os import getenv
 # import smtplib
 
 
-load_dotenv()
-app = Flask(__name__)
+
+app = Flask(__name__, instance_path=None)
 app.config['SECRET_KEY'] = getenv("SECRET_KEY")
 ckeditor = CKEditor(app)
 Bootstrap5(app)
